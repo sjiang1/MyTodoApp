@@ -48,9 +48,10 @@ public class TodoList {
         // Create a TodoList object with space for 5 items
         TodoList myTodoList = new TodoList(5);
 
+        Date currentDate = new Date();
         // Add some todo items
-        myTodoList.addTodoItem("Finish Java assignment", new Date());
-        myTodoList.addTodoItem("Grocery shopping", new Date());
+        myTodoList.addTodoItem("Finish Java assignment", currentDate);
+        myTodoList.addTodoItem("Grocery shopping", currentDate);
         
         // Display all items
         myTodoList.displayTodoItems();
