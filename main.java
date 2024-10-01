@@ -14,20 +14,20 @@ public class TodoList {
 
         @Override
         public String toString() {
-            return "Task: " + description + " | Due Date: " + myDateFormat.format(dueDate);
+            return "Task: " + description + " | Due Date: " + dateFormat.format(dueDate);
         }
     }
 
     // Array to store the Todo items
     private TodoItem[] todoItems;
     private int count;
-    SimpleDateFormat myDateFormat; 
+    SimpleDateFormat dateFormat; 
 
     // Constructor
     public TodoList(int size) {
         todoItems = new TodoItem[size];
         count = 0;
-        myDateFormat = new SimpleDateFormat ("E yyyy.MM.dd");
+        dateFormat = new SimpleDateFormat ("E yyyy.MM.dd");
     }
 
     // Method to add a Todo item
