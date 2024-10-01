@@ -28,9 +28,9 @@ public class TodoList {
     }
 
     // Method to add a Todo item
-    public void addTodoItem(String description) {
+    public void addTodoItem(String description, Date myDueDate) {
         if (count < todoItems.length) {
-            todoItems[count] = new TodoItem(description);
+            todoItems[count] = new TodoItem(description, myDueDate);
             count++;
         } else {
             System.out.println("Todo list is full!");
@@ -48,9 +48,10 @@ public class TodoList {
         // Create a TodoList object with space for 5 items
         TodoList myTodoList = new TodoList(5);
 
+        Date currentDate = new Date();
         // Add some todo items
-        myTodoList.addTodoItem("Finish Java assignment");
-        myTodoList.addTodoItem("Grocery shopping");
+        myTodoList.addTodoItem("Finish Java assignment", currentDate);
+        myTodoList.addTodoItem("Grocery shopping", currentDate);
         
         // Display all items
         myTodoList.displayTodoItems();
