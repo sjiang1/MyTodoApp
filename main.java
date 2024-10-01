@@ -1,4 +1,5 @@
 import java.util.Date;
+import java.text.SimpleDateFormat;
 
 public class TodoList {
     // Class to represent a single Todo item with a description and a due date
@@ -13,18 +14,20 @@ public class TodoList {
 
         @Override
         public String toString() {
-            return "Task: " + description + " | Due Date: " + dueDate;
+            return "Task: " + description + " | Due Date: " + myDateFormat.format(dueDate);
         }
     }
 
     // Array to store the Todo items
     private TodoItem[] todoItems;
     private int count;
+    SimpleDateFormat myDateFormat; 
 
     // Constructor
     public TodoList(int size) {
         todoItems = new TodoItem[size];
         count = 0;
+        myDateFormat = new SimpleDateFormat ("E yyyy.MM.dd");
     }
 
     // Method to add a Todo item
