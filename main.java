@@ -1,15 +1,19 @@
+import java.util.Date;
+
 public class TodoList {
     // Class to represent a single Todo item with a description and a due date
     class TodoItem {
         String description;
+        Date dueDate;
 
-        public TodoItem(String description) {
+        public TodoItem(String description, Date dueDate) {
             this.description = description;
+            this.dueDate = dueDate;
         }
 
         @Override
         public String toString() {
-            return "Task: " + description;
+            return "Task: " + description + " | Due Date: " + dueDate;
         }
     }
 
